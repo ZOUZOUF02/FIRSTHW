@@ -4,10 +4,10 @@ var API = []
  app.get('/', function (req, res) {
    res.send('Hello World')
  })
- parseXlsx('Book1.xlsx').then((data) => {
-  // data is an array of arrays
-  data.forEach(element => {
-    API.push({"name":element.name, "email":element.email,"img":element.image})
+ parseXlsx('Book1.xlsx').then((excel) => {
+  // excel is an array of arrays
+  excel.forEach(data => {
+    API.push({"name":data.name, "email":data.email,"image":data.image})
   });
 });
 app.listen(3000)
