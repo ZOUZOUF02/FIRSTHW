@@ -9,9 +9,9 @@ const result = excelToJson({
     sheet: [
         {
             name:'sheet1',
-            range:'A2:C7',
+            range:'A2:C7',//DIDN'T WORK
             columnToKey: {
-        A: 'Name',
+        A: 'Name',//DIDN'T WORK
         B: 'Email',
         C: 'Images'
             }
