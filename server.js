@@ -6,19 +6,17 @@ app.use(cors())
 const excelToJson = require('convert-excel-to-json');
 const result = excelToJson({
     sourceFile: 'Book1.xlsx',
-    sheet: [
-        {
-            name:'sheet1',
-            range:'A2:C7',//DIDN'T WORK
-            columnToKey: {
-        A: 'Name',//DIDN'T WORK
-        B: 'Email',
-        C: 'Images'
-            }
-        }
-    ]
-    });
-    
+    sourceFile: 'SOME-EXCEL-FILE.xlsx',
+    sheets: [{
+        name: 'sheet1',
+        columnToKey: {
+        	A: 'Name',
+    		B: 'Email',
+            C:'Image'
+        },
+        range: 'A2:C7'
+    }]
+});
 // app.get('/', function(req, res) {
 //     res.send('hello')
 // })
